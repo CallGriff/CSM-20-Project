@@ -1,0 +1,61 @@
+{
+  "nonce": "0x0",
+  "timestamp": "0x58ee40ba",
+  "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "gasLimit": "0xe0000000",
+  "gasUsed": "0x0",
+  "number": "0x0",
+  "difficulty": "0x1",
+  "coinbase": "0x0000000000000000000000000000000000000000",
+  "mixHash": "0x63746963616c2062797a616e74696e65206661756c7420746f6c6572616e6365",
+  "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "config": {
+    "chainId": 1337,
+    "homesteadBlock": 0,
+    "eip150Block": 0,
+    "eip150Hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "eip155Block": 0,
+    "eip158Block": 0,
+    "byzantiumBlock": 0,
+    "constantinopleBlock": 0,
+    "petersburgBlock": 0,
+    "istanbulBlock": 0,
+    "muirglacierblock": 0,
+    "berlinBlock": 0,
+    "londonBlock": 0,
+    "isQuorum": true,
+    "maxCodeSizeConfig": [
+      {
+        "block": 0,
+        "size": 64
+      }
+    ],
+    "txnSizeLimit": 64
+  },
+  "alloc": {
+    "0xc55ac005dd02cf4b5ff6c0a1e768db3884da28aa": {
+      "balance": "1000000000000000000000000000"
+    },
+    "0x006ba76e0cf6ef277b89a484a5f343a666c89746": {
+      "balance": "1000000000000000000000000000"
+    },
+    "0x81c6725d0cfbf2d739bf45a2fce3eaeed33fd757": {
+      "balance": "1000000000000000000000000000"
+    },
+    "0xd53528c5c2f36f58cd53229a94a022a653393a4b": {
+      "balance": "1000000000000000000000000000"
+    },
+    "0x006c6b95252146c16c4ef238f14bb13c347a788b": {
+      "balance": "1000000000000000000000000000"
+    },
+    "0xc0a349cf77676ef6b6f069d2897fe07f45bb423c": {
+      "balance": "1000000000000000000000000000"
+    },
+    "0x3a59a2b8d4b948dbf78ed444d22d377bcd81d53a": {
+      "balance": "1000000000000000000000000000"
+    },
+    "0xd7bd84c2bce433efb1eac33e1f6ca49bd26783a2": {
+      "balance": "1000000000000000000000000000"
+    }
+  }
+}

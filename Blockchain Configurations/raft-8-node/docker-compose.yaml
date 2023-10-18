@@ -1,0 +1,260 @@
+version: '3.3'
+
+services:
+  node0:
+    build:
+      context: .
+      dockerfile: buildnode.Dockerfile
+      args:
+        - VALIDATOR=validator0
+    restart: unless-stopped
+    hostname: node0
+    env_file:
+      - .env
+    command:
+      --datadir ./data
+      --identity node0
+      --networkid ${NETWORK_ID} --nodiscover
+      --syncmode full
+      --raft --raftport 53000 --raftblocktime 50 --emitcheckpoints
+      --mine --miner.threads 1 --miner.gasprice 0 --emitcheckpoints
+      --unlock ${ADDRESS_VALIDATOR_0} --allow-insecure-unlock --password ./data/keystore/accountPassword
+      --http --http.addr 0.0.0.0 --http.port 22000 --http.corsdomain "*" --http.vhosts "*"
+      --ws --ws.addr 0.0.0.0 --ws.port 32000 --ws.origins "*"
+      --http.api admin,eth,debug,miner,net,txpool,personal,web3
+      --ws.api admin,eth,debug,miner,net,txpool,personal,web3
+      --port 30320
+    ports:
+      - "30320:30320"
+      - "22000:22000"
+      - "32000:32000"
+      - "53000:53000"
+    networks:
+      - postnet
+
+  node1:
+    build:
+      context: .
+      dockerfile: buildnode.Dockerfile
+      args:
+        - VALIDATOR=validator1
+    restart: unless-stopped
+    hostname: node1
+    env_file:
+      - .env
+    command:
+      --datadir ./data
+      --identity node1
+      --networkid ${NETWORK_ID} --nodiscover
+      --syncmode full
+      --raft --raftport 53001 --raftblocktime 50 --emitcheckpoints
+      --mine --miner.threads 1 --miner.gasprice 0 --emitcheckpoints
+      --unlock ${ADDRESS_VALIDATOR_1} --allow-insecure-unlock --password ./data/keystore/accountPassword
+      --http --http.addr 0.0.0.0 --http.port 22001 --http.corsdomain "*" --http.vhosts "*"
+      --ws --ws.addr 0.0.0.0 --ws.port 32001 --ws.origins "*"
+      --http.api admin,eth,debug,miner,net,txpool,personal,web3
+      --ws.api admin,eth,debug,miner,net,txpool,personal,web3
+      --port 30321
+    ports:
+      - "30321:30321"
+      - "22001:22001"
+      - "32001:32001"
+      - "53001:53001"
+    networks:
+      - postnet
+
+  node2:
+    build:
+      context: .
+      dockerfile: buildnode.Dockerfile
+      args:
+        - VALIDATOR=validator2
+    restart: unless-stopped
+    hostname: node2
+    env_file:
+      - .env
+    command:
+      --datadir ./data
+      --identity node2
+      --networkid ${NETWORK_ID} --nodiscover
+      --syncmode full
+      --raft --raftport 53002 --raftblocktime 50 --emitcheckpoints
+      --mine --miner.threads 1 --miner.gasprice 0 --emitcheckpoints
+      --unlock ${ADDRESS_VALIDATOR_2} --allow-insecure-unlock --password ./data/keystore/accountPassword
+      --http --http.addr 0.0.0.0 --http.port 22002 --http.corsdomain "*" --http.vhosts "*"
+      --ws --ws.addr 0.0.0.0 --ws.port 32002 --ws.origins "*"
+      --http.api admin,eth,debug,miner,net,txpool,personal,web3
+      --ws.api admin,eth,debug,miner,net,txpool,personal,web3
+      --port 30322
+    ports:
+      - "30322:30322"
+      - "22002:22002"
+      - "32002:32002"
+      - "53002:53002"
+    networks:
+      - postnet
+
+
+  node3:
+    build:
+      context: .
+      dockerfile: buildnode.Dockerfile
+      args:
+        - VALIDATOR=validator3
+    restart: unless-stopped
+    hostname: node3
+    env_file:
+      - .env
+    command:
+      --datadir ./data
+      --identity node3
+      --networkid ${NETWORK_ID} --nodiscover
+      --syncmode full
+      --raft --raftport 53003 --raftblocktime 50 --emitcheckpoints
+      --mine --miner.threads 1 --miner.gasprice 0 --emitcheckpoints
+      --unlock ${ADDRESS_VALIDATOR_3} --allow-insecure-unlock --password ./data/keystore/accountPassword
+      --http --http.addr 0.0.0.0 --http.port 22003 --http.corsdomain "*" --http.vhosts "*"
+      --ws --ws.addr 0.0.0.0 --ws.port 32003 --ws.origins "*"
+      --http.api admin,eth,debug,miner,net,txpool,personal,web3
+      --ws.api admin,eth,debug,miner,net,txpool,personal,web3
+      --port 30323
+    ports:
+      - "30323:30323"
+      - "22003:22003"
+      - "32003:32003"
+      - "53003:53003"
+    networks:
+      - postnet
+
+
+  node4:
+    build:
+      context: .
+      dockerfile: buildnode.Dockerfile
+      args:
+        - VALIDATOR=validator4
+    restart: unless-stopped
+    hostname: node4
+    env_file:
+      - .env
+    command:
+      --datadir ./data
+      --identity node4
+      --networkid ${NETWORK_ID} --nodiscover
+      --syncmode full
+      --raft --raftport 53004 --raftblocktime 50 --emitcheckpoints
+      --mine --miner.threads 1 --miner.gasprice 0 --emitcheckpoints
+      --unlock ${ADDRESS_VALIDATOR_4} --allow-insecure-unlock --password ./data/keystore/accountPassword
+      --http --http.addr 0.0.0.0 --http.port 22004 --http.corsdomain "*" --http.vhosts "*"
+      --ws --ws.addr 0.0.0.0 --ws.port 32004 --ws.origins "*"
+      --http.api admin,eth,debug,miner,net,txpool,personal,web3
+      --ws.api admin,eth,debug,miner,net,txpool,personal,web3
+      --port 30324
+    ports:
+      - "30324:30324"
+      - "22004:22004"
+      - "32004:32004"
+      - "53004:53004"
+    networks:
+      - postnet
+      
+
+  node5:
+    build:
+      context: .
+      dockerfile: buildnode.Dockerfile
+      args:
+        - VALIDATOR=validator5
+    restart: unless-stopped
+    hostname: node5
+    env_file:
+      - .env
+    command:
+      --datadir ./data
+      --identity node5
+      --networkid ${NETWORK_ID} --nodiscover
+      --syncmode full
+      --raft --raftport 53005 --raftblocktime 50 --emitcheckpoints
+      --mine --miner.threads 1 --miner.gasprice 0 --emitcheckpoints
+      --unlock ${ADDRESS_VALIDATOR_5} --allow-insecure-unlock --password ./data/keystore/accountPassword
+      --http --http.addr 0.0.0.0 --http.port 22005 --http.corsdomain "*" --http.vhosts "*"
+      --ws --ws.addr 0.0.0.0 --ws.port 32005 --ws.origins "*"
+      --http.api admin,eth,debug,miner,net,txpool,personal,web3
+      --ws.api admin,eth,debug,miner,net,txpool,personal,web3
+      --port 30325
+    ports:
+      - "30325:30325"
+      - "22005:22005"
+      - "32005:32005"
+      - "53005:53005"
+    networks:
+      - postnet
+      
+
+  node6:
+    build:
+      context: .
+      dockerfile: buildnode.Dockerfile
+      args:
+        - VALIDATOR=validator6
+    restart: unless-stopped
+    hostname: node6
+    env_file:
+      - .env
+    command:
+      --datadir ./data
+      --identity node6
+      --networkid ${NETWORK_ID} --nodiscover
+      --syncmode full
+      --raft --raftport 53006 --raftblocktime 50 --emitcheckpoints
+      --mine --miner.threads 1 --miner.gasprice 0 --emitcheckpoints
+      --unlock ${ADDRESS_VALIDATOR_6} --allow-insecure-unlock --password ./data/keystore/accountPassword
+      --http --http.addr 0.0.0.0 --http.port 22006 --http.corsdomain "*" --http.vhosts "*"
+      --ws --ws.addr 0.0.0.0 --ws.port 32006 --ws.origins "*"
+      --http.api admin,eth,debug,miner,net,txpool,personal,web3
+      --ws.api admin,eth,debug,miner,net,txpool,personal,web3
+      --port 30326
+    ports:
+      - "30326:30326"
+      - "22006:22006"
+      - "32006:32006"
+      - "53006:53006"
+    networks:
+      - postnet
+      
+
+  node7:
+    build:
+      context: .
+      dockerfile: buildnode.Dockerfile
+      args:
+        - VALIDATOR=validator7
+    restart: unless-stopped
+    hostname: node7
+    env_file:
+      - .env
+    command:
+      --datadir ./data
+      --identity node7
+      --networkid ${NETWORK_ID} --nodiscover
+      --syncmode full
+      --raft --raftport 53007 --raftblocktime 50 --emitcheckpoints
+      --mine --miner.threads 1 --miner.gasprice 0 --emitcheckpoints
+      --unlock ${ADDRESS_VALIDATOR_7} --allow-insecure-unlock --password ./data/keystore/accountPassword
+      --http --http.addr 0.0.0.0 --http.port 22007 --http.corsdomain "*" --http.vhosts "*"
+      --ws --ws.addr 0.0.0.0 --ws.port 32007 --ws.origins "*"
+      --http.api admin,eth,debug,miner,net,txpool,personal,web3
+      --ws.api admin,eth,debug,miner,net,txpool,personal,web3
+      --port 30327
+    ports:
+      - "30327:30327"
+      - "22007:22007"
+      - "32007:32007"
+      - "53007:53007"
+    networks:
+      - postnet
+
+
+
+networks:
+  postnet:
