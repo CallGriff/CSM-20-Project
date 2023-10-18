@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="873.0" prefWidth="1265.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.StaffView">
+   <top>
+      <VBox prefHeight="125.0" prefWidth="1341.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Currently signed in as: " textAlignment="CENTER" wrappingWidth="205.251953125" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets top="45.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="accountSelection" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets top="45.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Blockchain-Bank">
+                     <font>
+                        <Font name="Wingdings" size="37.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="145.0" top="30.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="addressText" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:" wrappingWidth="374.10546875">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="110.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <HBox maxHeight="-Infinity" prefHeight="212.0" prefWidth="1265.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="staffTransactionTable" maxHeight="1.7976931348623157E308" prefHeight="183.0" prefWidth="771.0">
+               <columns>
+                  <TableColumn fx:id="transactionId" prefWidth="161.0" text="Transaction" />
+                  <TableColumn fx:id="transactionFrom" prefWidth="112.0" text="From" />
+                  <TableColumn fx:id="transactionTo" prefWidth="124.0" text="To" />
+                  <TableColumn fx:id="transactionDate" prefWidth="178.0" text="Date" />
+                  <TableColumn fx:id="transactionAmount" prefWidth="195.0" text="Amount" />
+               </columns>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TableView>
+            <TextArea fx:id="consoleOutput" prefHeight="113.0" prefWidth="494.0" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <HBox prefHeight="536.0" prefWidth="1265.0" style="-fx-border-color: BLACK;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="memberTable" prefHeight="399.0" prefWidth="929.0">
+               <columns>
+                  <TableColumn fx:id="memberName" prefWidth="136.0" text="Member Name" />
+                  <TableColumn fx:id="memberBalance" minWidth="0.0" prefWidth="148.0" text="Balance" />
+                  <TableColumn fx:id="memberLoanAmount" prefWidth="174.0" text="Loan Amount" />
+               </columns>
+            </TableView>
+            <VBox fx:id="loanRequests" prefHeight="489.0" prefWidth="328.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Loan Requests" textAlignment="CENTER" underline="true" wrappingWidth="335.69921875">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <ListView fx:id="loanRequestList" maxHeight="1.7976931348623157E308" prefHeight="509.0" prefWidth="336.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

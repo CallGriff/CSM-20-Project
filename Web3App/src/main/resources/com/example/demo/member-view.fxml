@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="873.0" prefWidth="1265.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.MemberView">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="402.0" prefWidth="1260.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Polygon fx:id="leftArrow" fill="#abbccd" points="-130.0, 0.0, -36.0, 35.0, -36.0, -39.0" stroke="BLACK" strokeType="INSIDE">
+                     <HBox.margin>
+                        <Insets bottom="170.0" left="390.0" />
+                     </HBox.margin>
+                  </Polygon>
+                  <VBox fx:id="member2Container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="372.0" prefWidth="272.0" style="-fx-border-color: BLACK; -fx-border-width: 4;">
+                     <children>
+                        <Text fx:id="selectedMemberName" strokeType="OUTSIDE" strokeWidth="0.0" text="member1" textAlignment="CENTER" wrappingWidth="271.966796875">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="selectedMemberAddr" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:" wrappingWidth="258.13671875">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin></Text>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="270.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Transfer: £">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="payMemberText" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="150.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Button fx:id="payMemberButton" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="84.0" style="-fx-background-color: LIGHTGREEN; -fx-border-color: BLACK;" text="Pay" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets left="95.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <Polygon fx:id="rightArrow" fill="#abbccd" points="46.0, 0.0, -37.0, 40.0, -37.0, -39.0" stroke="BLACK" strokeType="INSIDE">
+                     <HBox.margin>
+                        <Insets bottom="170.0" left="15.0" />
+                     </HBox.margin>
+                  </Polygon>
+               </children>
+            </HBox>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="134.0" prefWidth="1267.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="123.0" prefWidth="636.0" style="-fx-border-color: RED; -fx-border-width: 3;" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Text fx:id="currentLoanText" strokeType="OUTSIDE" strokeWidth="0.0" text="Current loan due: £0.00" textAlignment="CENTER" underline="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="210.0" />
+                           </VBox.margin>
+                        </Text>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <HBox maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="92.0" prefWidth="564.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="£" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="45.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <TextField fx:id="loanRequestText" maxWidth="-Infinity" prefHeight="25.0" prefWidth="161.0" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets top="50.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Button fx:id="payLoanButton" mnemonicParsing="false" text="Pay loan">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="50.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="requestLoanButton" mnemonicParsing="false" text="Request loan">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="50.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="120.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="320.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <VBox prefHeight="136.0" prefWidth="1277.0" style="-fx-border-color: BLACK;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Currently signed in as: " textAlignment="CENTER" wrappingWidth="205.251953125" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets top="45.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="accountSelection" prefWidth="150.0" promptText="member1">
+                     <HBox.margin>
+                        <Insets top="45.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Blockchain-Bank">
+                     <font>
+                        <Font name="Wingdings" size="37.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="145.0" top="30.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="addressText" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:" wrappingWidth="374.10546875" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="110.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <Text fx:id="accountBalance" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Balance: £100" wrappingWidth="262.70703125">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="520.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <HBox prefHeight="212.0" prefWidth="1265.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox maxHeight="-Infinity" prefHeight="259.0" prefWidth="1265.0">
+               <children>
+                  <TableView fx:id="transactionTable" maxHeight="-Infinity" prefHeight="258.0" prefWidth="771.0">
+                     <columns>
+                        <TableColumn fx:id="transactionId" prefWidth="161.0" text="Transaction" />
+                        <TableColumn fx:id="transactionFrom" prefWidth="112.0" text="From" />
+                        <TableColumn fx:id="transactionTo" prefWidth="124.0" text="To" />
+                        <TableColumn fx:id="transactionDate" prefWidth="178.0" text="Date" />
+                        <TableColumn fx:id="transactionAmount" prefWidth="195.0" text="Amount" />
+                     </columns>
+                  </TableView>
+                  <TextArea fx:id="consoleOutput" disable="true" prefHeight="113.0" prefWidth="494.0" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
