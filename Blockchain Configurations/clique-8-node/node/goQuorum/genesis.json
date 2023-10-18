@@ -1,0 +1,66 @@
+{
+  "nonce": "0x0",
+  "timestamp": "0x58ee40ba",
+  "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000ae6c82590acad9ab9d015530179924f803c0478ba6f93d7e3a304806131d866f11597e8bd14bb9a3d6d13f9d34b6a020333f3d723760bdb4f6c47d1e7d53aebf3d86ab9d1e93e92b5afe571b4f568bf5aef807094932362db82c14938d52060b81faaadd6374efa9f1e72a905dce739fb193ab7ce9bb0013ded239da43f4c2f1602d202783d6349cb3ebbbff2e6ee495320d8ee921e24201eff6f1cd7930fa8d0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "gasLimit": "0xe0000000",
+  "gasUsed": "0x0",
+  "number": "0x0",
+  "difficulty": "0x1",
+  "coinbase": "0x0000000000000000000000000000000000000000",
+  "mixHash": "0x63746963616c2062797a616e74696e65206661756c7420746f6c6572616e6365",
+  "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "config": {
+    "chainId": 1337,
+    "homesteadBlock": 0,
+    "eip150Block": 0,
+    "eip150Hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "eip155Block": 0,
+    "eip158Block": 0,
+    "byzantiumBlock": 0,
+    "constantinopleBlock": 0,
+    "petersburgBlock": 0,
+    "istanbulBlock": 0,
+    "muirglacierblock": 0,
+    "berlinBlock": 0,
+    "londonBlock": 0,
+    "isQuorum": true,
+    "maxCodeSizeConfig": [
+      {
+        "block": 0,
+        "size": 64
+      }
+    ],
+    "txnSizeLimit": 64,
+    "clique": {
+      "policy": 0,
+      "period": 10,
+      "epoch": 30000
+    }
+  },
+  "alloc": {
+    "0xae6c82590acad9ab9d015530179924f803c0478b": {
+      "balance": "1000000000000000000000000000"
+    },
+    "0xa6f93d7e3a304806131d866f11597e8bd14bb9a3": {
+      "balance": "1000000000000000000000000000"
+    },
+    "0xd6d13f9d34b6a020333f3d723760bdb4f6c47d1e": {
+      "balance": "1000000000000000000000000000"
+    },
+    "0x7d53aebf3d86ab9d1e93e92b5afe571b4f568bf5": {
+      "balance": "1000000000000000000000000000"
+    },
+    "0xaef807094932362db82c14938d52060b81faaadd": {
+      "balance": "1000000000000000000000000000"
+    },
+    "0x6374efa9f1e72a905dce739fb193ab7ce9bb0013": {
+      "balance": "1000000000000000000000000000"
+    },
+    "0xded239da43f4c2f1602d202783d6349cb3ebbbff": {
+      "balance": "1000000000000000000000000000"
+    },
+    "0x2e6ee495320d8ee921e24201eff6f1cd7930fa8d": {
+      "balance": "1000000000000000000000000000"
+    }
+  }
+}
